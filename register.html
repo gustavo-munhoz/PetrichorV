@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" href="loginStyles.css">
+        <link rel="stylesheet" href="registerStyles.css">
         <!-- gemunu font links -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +17,22 @@
         </div>
         <div class="centerContainer">
             <div class="loginItems">
-                <h2 class= "welcomeMensage">Welcome Back. They'll surely feast on your flesh.</h2>
                 <div class="userInfo">
+                    <p>Username</p>
+                    <input type="text" id="username">
                     <p>Email or username</p>
-                    <input type="text" id = "username">
+                    <input type="text" id="email">
                     <p>Password</p>
-                    <input type="password" id = "password"><br>
-                    <div class="loginButtons">
-                        <button id="loginButton">Login</button>
+                    <input type="password" id="password">
+                    <p>Confirm Password</p>
+                    <input type="password" id="passwordConfirmation">
+                    <div class="loginButton">
                         <button id="registerButton">Register</button>
                     </div>
                 </div>
+                <h2 class= "welcomeMensage">Welcome. Join at your own risk.</h2>
             </div>
         </div>
-
-        <script src="login.js"></script>
     </body>
     
 </html>
