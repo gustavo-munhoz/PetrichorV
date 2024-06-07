@@ -59,11 +59,13 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: left;
     margin: 50px;
     padding: 0;
 }
 .item{
+    margin-left: 30px;
+    margin-bottom: 30px;
     padding: 10px;
     border-radius: 8px;
     font-family: "Gemunu Libre", sans-serif;
@@ -97,7 +99,7 @@ body{
     font-size: 35px;
     border: none;
     width: 100%;
-    height: 85px;
+    height: 65px;
     border-radius: 12px;
 }
 .cartButton:hover{
@@ -109,6 +111,24 @@ body{
     margin-left: 0;
     font-size: 35px;
 }
+.green{
+    color: #72be3e
+}
+.red{
+    color: #f34c3d;
+}
+.yellow{
+    color: #e6d70e;
+}
+.purple {
+    color: #ee83d2;
+}
+.blue{
+    color: #46dcf7;
+}
+.orange{
+    color: #e99735;
+}
 .itemPrice{
     color: #585858;
     margin-top: 10px;
@@ -116,6 +136,7 @@ body{
     font-size: 25px;
 }
 .itemDescription{
+    color: black;
     margin-top: 10px;
     font-size: 20px;
 }
@@ -125,4 +146,35 @@ body{
 .stackNumbers{
     font-size: 16px;
     color: #838383;
+}
+.bottomBar {
+    background-color: #4A4A4A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.info {
+    font-size: 20px;
+    font-family: "Gemunu Libre", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logoWrapper img {
+    height: 63px;
+    width: auto;
 }
