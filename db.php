@@ -23,6 +23,7 @@ $sql = "CREATE TABLE IF NOT EXISTS products (
 id_product INT AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(255),
 price DECIMAL(10, 2),
+description VARCHAR(255),
 image_url VARCHAR(255)
 )";
 $conn->query($sql);
