@@ -1,9 +1,9 @@
-body{
+body {
     background-color: #1E1e1e;
     margin: 0;
     padding: 0;
 }
-.NavBar{
+.NavBar {
     background-color: #6C6C6C;
     display: flex;
     flex-direction: row;
@@ -13,19 +13,19 @@ body{
     justify-items: center;
     justify-content: space-between;
 }
-.logo{
+.logo {
     height: 63px;
     width: 123px;
     margin-left: 32px;
 }
-.searchElements{
+.searchElements {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-right: 32px;
 }
-#productSearch{
+#productSearch {
     font-family: 'Gemunu Libre', sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -37,11 +37,11 @@ body{
     height: 48px;
     border-radius: 4px;
 }
-#productSearch:active{
+#productSearch:active {
     border: none;
 }
 
-.navButton{
+.navButton {
     margin: auto;
     font-size: 20px;
     width: 40px;
@@ -50,12 +50,12 @@ body{
     color: white;
     border: none;
 }
-.navButton:hover{
+.navButton:hover {
     cursor: pointer;
     border: 3px gray;
     background-color: #7c7c7c;
 }
-.storeItems{
+.storeItems {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,7 +63,7 @@ body{
     margin: 50px;
     padding: 0;
 }
-.item{
+.item {
     margin-left: 30px;
     margin-bottom: 30px;
     padding: 10px;
@@ -76,7 +76,7 @@ body{
     width: 297px;
     height: 425px;
 }
-.imgContainer{
+.imgContainer {
     border-radius: 12px;
     background-color: #535353;
     display: flex;
@@ -84,14 +84,14 @@ body{
     width: 297px;
     justify-content: center;
 }
-.itemImg{
+.itemImg {
     display: block;
     border-radius: 12px;
     background-color: #535353;
     width: auto;
     height: 190px;
 }
-.cartButton{
+.cartButton {
     margin-top: auto;
     background-color: #BABABA;
     font-family: "Gemunu Libre", sans-serif;
@@ -102,48 +102,48 @@ body{
     height: 65px;
     border-radius: 12px;
 }
-.cartButton:hover{
+.cartButton:hover {
     cursor: pointer;
     background-color: #a3a3a3;
 }
-.itemName{
-    margin: 10px;
-    margin-left: 0;
+
+.itemName {
+    margin: 10px 10px 10px 0;
     font-size: 35px;
 }
-.green{
+.Green {
     color: #72be3e
 }
-.red{
+.Red {
     color: #f34c3d;
 }
-.yellow{
+.Yellow {
     color: #e6d70e;
 }
-.purple {
+.Purple {
     color: #ee83d2;
 }
-.blue{
+.Blue {
     color: #46dcf7;
 }
-.orange{
+.Orange {
     color: #e99735;
 }
-.itemPrice{
+.itemPrice {
     color: #585858;
     margin-top: 10px;
     margin-bottom: auto;
     font-size: 25px;
 }
-.itemDescription{
+.itemDescription {
     color: black;
     margin-top: 10px;
     font-size: 20px;
 }
-.dmgNumbers{
+.dmgNumbers {
     color: #d8ba4c;
 }
-.stackNumbers{
+.stackNumbers {
     font-size: 16px;
     color: #838383;
 }
