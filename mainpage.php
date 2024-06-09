@@ -23,68 +23,27 @@
         </div>
     </div>
     <div class="storeItems">
+        <?php
+        include 'fetchItems.php';
 
-        <div class="item">
-            <div class="imgContainer">
-                <img class="itemImg" src="images/AtG_Missile_Mk_1.png" alt="ATG">
-            </div>
-            <h3 class="itemName green">AtG Missile Mk. 1</h3>
-            <p class="itemPrice">Price: $30</p>
-            <p class="itemDescription"><span class="dmgNumbers">10%</span> chance to fire a missile that deals <span class="dmgNumbers">300%</span> 
-                <span class="stackNumbers">(+300% per stack)</span> TOTAL damage.</p>
-            <button class="cartButton">ADD TO CART</button>
-        </div>
+        $items = fetchItems();
 
-        <div class="item">
-            <div class="imgContainer">
-                <img class="itemImg" src="images/item.png" alt="TEST">
-            </div>
-            <h3 class="itemName blue">Item Name</h3>
-            <p class="itemPrice">Price</p>
-            <p class="itemDescription">Item description</p>
-            <button class="cartButton">ADD TO CART</button>
-        </div>
-
-        <div class="item">
-            <div class="imgContainer">
-                <img class="itemImg" src="images/item.png" alt="TEST">
-            </div>
-            <h3 class="itemName orange">Item Name</h3>
-            <p class="itemPrice">Price</p>
-            <p class="itemDescription">Item description</p>
-            <button class="cartButton">ADD TO CART</button>
-        </div>
-        
-        <div class="item">
-            <div class="imgContainer">
-                <img class="itemImg" src="images/item.png" alt="TEST">
-            </div>
-            <h3 class="itemName yellow">Item Name</h3>
-            <p class="itemPrice">Price</p>
-            <p class="itemDescription">Item description</p>
-            <button class="cartButton">ADD TO CART</button>
-        </div>
-
-        <div class="item">
-            <div class="imgContainer">
-                <img class="itemImg" src="images/item.png" alt="TEST">
-            </div>
-            <h3 class="itemName red">Item Name</h3>
-            <p class="itemPrice">Price</p>
-            <p class="itemDescription">Item description</p>
-            <button class="cartButton">ADD TO CART</button>
-        </div>
-
-        <div class="item">
-            <div class="imgContainer">
-                <img class="itemImg" src="images/item.png" alt="TEST">
-            </div>
-            <h3 class="itemName purple">Item Name</h3>
-            <p class="itemPrice">Price</p>
-            <p class="itemDescription">Item description</p>
-            <button class="cartButton">ADD TO CART</button>
-        </div>
-
+        if (!empty($items)) {
+            foreach ($items as $item) {
+                echo "<div class='item'>
+                <div class='imgContainer'>
+                    <img class='itemImg' src='{$item->image}' alt='{$item->name}'>
+                </div>
+                <h3 class='itemName {$item->color}'>{$item->name}</h3>
+                <p class='itemPrice'>Price: \${$item->price}</p>
+                <p class='itemDescription'>{$item->description}</p>
+                <button class='cartButton'>ADD TO CART</button>
+              </div>";
+            }
+        } else {
+            echo "No items found.";
+        }
+        ?>
     </div>
     <div class="bottomBar">
         <div class="info">
@@ -104,6 +63,7 @@
         </div>
     </div>
 
-    <?php include 'db.php'; ?>
+<!--    --><?php //include 'db.php'; ?>
+
 </body>
 </html>
