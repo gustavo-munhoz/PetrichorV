@@ -139,6 +139,12 @@ body {
     color: black;
     margin-top: 10px;
     font-size: 20px;
+    max-height: 3em; /* Limit the height to 3 lines */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
+    display: -webkit-box; /* For webkit-based browsers */
+    -webkit-box-orient: vertical; /* For webkit-based browsers */
+    -webkit-line-clamp: 3; /* Limit to 3 lines (for webkit-based browsers) */
 }
 .dmgNumbers {
     color: #d8ba4c;
