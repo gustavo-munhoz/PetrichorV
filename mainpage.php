@@ -16,8 +16,10 @@
     <div class="NavBar">
         <img class="logo" src="images/logo.png" alt="logo.png" >
         <div class="searchElements">
-            <input id="productSearch" type="text" placeholder="Find something...">
-            <button id="searchButton" class="navButton"><i class="bi bi-search"></i></button>
+            <form id="searchForm" action="" method="GET" autocomplete="off">
+                <input id="productSearch" name="query" type="text" placeholder="Find something...">
+                <button id="searchButton" class="navButton" type="submit"><i class="bi bi-search"></i></button>
+            </form>
             <button id="cart" class="navButton"><i class="bi bi-cart-dash-fill"></i></button>
             <button id="hamburger" class="navButton"><i class="bi bi-list"></i></button>
         </div>
@@ -30,7 +32,7 @@
 
         if (!empty($items)) {
             foreach ($items as $item) {
-                echo "<div class='item'>
+                echo "<div class='item' id='item-{$item->id}'>
                 <div class='imgContainer'>
                     <img class='itemImg' src='{$item->image}' alt='{$item->name}'>
                 </div>
@@ -64,6 +66,6 @@
     </div>
 
 <!--    --><?php //include 'db.php'; ?>
-
+        <script src="mainpage.js"></script>
 </body>
 </html>

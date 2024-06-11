@@ -146,8 +146,8 @@ body {
     font-size: 20px;
     align-items: left;
     width: 90%;
-    max-height: 3em; /* Limit the height to 3 lines */
-    overflow: scroll; /* Hide overflow text */
+    max-height: 3em; 
+    overflow: scroll; 
 }
 .itemDescription::-webkit-scrollbar{
     display: none;
