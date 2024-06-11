@@ -114,5 +114,6 @@ body {
 }
 
 #registerButton:hover{
+    cursor: pointer;
     background-color: #5c5c5c;
 }

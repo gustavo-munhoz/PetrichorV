@@ -1,0 +1,112 @@
+@import "styles.css";
+
+body{
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c6c6c;
+    margin: 461px;
+    margin-top: 50px;
+    align-self: center;
+    padding: 50px
+}
+.cart h2{
+    font-size: 120px;
+    color: white;
+    font-weight: normal;
+    margin: 50px;
+}
+.cartProducts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.product{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    width: 485px;
+    height: 100px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.product img{
+    background-color: #535353;
+    border: none;
+    border-radius: 12px;
+    width: 100px;
+    height: 80px;
+}
+.productDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 287px;
+    margin: 10px;
+}
+.productDescription #itemName{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0px;
+}
+.productDescription #itemPrice{
+    font-size: 26px;
+    margin: 0px;
+    margin-top: 10px;
+}
+.productQtd{
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 26px;
+}
+.purchaseElements{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+.totalCost{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 400px;
+    height: 84px;
+}
+#purchaseButton{
+    margin-left: 10px;
+    height: 90px;
+    border: none;
+    border-radius: 8px;
+    width: 150px;
+    background-color: #C1F979;
+    font-weight: bold;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 32px;
+}
+#purchaseButton:hover{
+    cursor: pointer;
+    background-color: #A8E85D;
+}
