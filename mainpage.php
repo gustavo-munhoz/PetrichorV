@@ -28,6 +28,7 @@
         <a href="javascript:void(0)" class="closeButton" id="closeButton">&times;</a>
         <a href="cart.php">Cart</a>
         <a id="logoutButton">Logout</a>
+        <a href="admin.html" id="adminButton">Admin</a>
     </div>
 
     <div class="storeItems">

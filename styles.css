@@ -201,12 +201,13 @@ body {
 }
 
 .sideMenu a {
-    padding: 10px 15px;
+    padding: 10px 30px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .sideMenu a:hover {
