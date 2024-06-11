@@ -18,6 +18,7 @@ function fetchItems() {
             $items = [];
             while ($row = $result->fetch_assoc()) {
                 $item = new stdClass();
+                $item->id = $row['id_product'];
                 $item->name = $row['name'];
                 $item->color = $row['color'];
                 $item->description = $row['description'];

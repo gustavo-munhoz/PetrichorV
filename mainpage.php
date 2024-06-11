@@ -62,8 +62,5 @@
             <img src="images/logo.png" alt="LOGO">
         </div>
     </div>
-
-<!--    --><?php //include 'db.php'; ?>
-
 </body>
 </html>
