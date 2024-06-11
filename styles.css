@@ -59,30 +59,32 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     margin: 50px;
     padding: 0;
 }
 .item {
     margin-left: 30px;
     margin-bottom: 30px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
     font-family: "Gemunu Libre", sans-serif;
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 297px;
-    height: 425px;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 500px;
 }
 .imgContainer {
     border-radius: 12px;
     background-color: #535353;
     display: flex;
     height: auto;
-    width: 297px;
+    width: 100%;
     justify-content: center;
+    padding: 5px;
 }
 .itemImg {
     display: block;
@@ -92,7 +94,6 @@ body {
     height: 190px;
 }
 .cartButton {
-    margin-top: auto;
     background-color: #BABABA;
     font-family: "Gemunu Libre", sans-serif;
     font-weight: bold;
@@ -108,8 +109,9 @@ body {
 }
 
 .itemName {
-    margin: 10px 10px 10px 0;
+    margin: 10px;
     font-size: 35px;
+    text-align: center;
 }
 .Green {
     color: #72be3e
@@ -132,26 +134,23 @@ body {
 .itemPrice {
     color: #585858;
     margin-top: 10px;
-    margin-bottom: auto;
     font-size: 25px;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 5px;
 }
 .itemDescription {
     color: black;
     margin-top: 10px;
+    margin: 0;
     font-size: 20px;
+    align-items: left;
+    width: 90%;
     max-height: 3em; /* Limit the height to 3 lines */
-    overflow: hidden; /* Hide overflow text */
-    text-overflow: ellipsis; /* Add ellipsis (...) for overflow text */
-    display: -webkit-box; /* For webkit-based browsers */
-    -webkit-box-orient: vertical; /* For webkit-based browsers */
-    -webkit-line-clamp: 3; /* Limit to 3 lines (for webkit-based browsers) */
+    overflow: scroll; /* Hide overflow text */
 }
-.dmgNumbers {
-    color: #d8ba4c;
-}
-.stackNumbers {
-    font-size: 16px;
-    color: #838383;
+.itemDescription::-webkit-scrollbar{
+    display: none;
 }
 .bottomBar {
     background-color: #4A4A4A;
@@ -159,7 +158,6 @@ body {
     flex-direction: column;
     align-items: center;
     color: white;
-    padding: 20px 0;
 }
 
 .info {
