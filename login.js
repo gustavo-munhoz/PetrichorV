@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 });
 
+
 function Login(usernameInput, passwordInput) {
     const username = usernameInput.value;
     const password = passwordInput.value;
