@@ -21,6 +21,15 @@
             <button id="hamburger" class="navButton"><i class="bi bi-list"></i></button>
         </div>
     </div>
+
+    <div id="sideMenu" class="sideMenu">
+        <a href="javascript:void(0)" class="closeButton" id="closeButton">&times;</a>
+        <a href="mainpage.php">Store</a>
+        <a id="logoutButton">Logout</a>
+        <a href="admin.html" id="adminButton">Admin</a>
+        <!-- TODO: add admin button, to add or remove products from the store -->
+    </div>
+
     <div class="cart">
         <h2>Your cart</h2>
         <div class="cartProducts">
@@ -73,5 +82,6 @@
             <img src="images/logo.png" alt="LOGO">
         </div>
     </div>
+    <script src="cart.js"></script>
 </body>
 </html>

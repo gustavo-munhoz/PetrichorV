@@ -18,12 +18,19 @@
         <div class="searchElements">
             <form id="searchForm" action="" method="GET" autocomplete="off">
                 <input id="productSearch" name="query" type="text" placeholder="Find something...">
-                <button id="searchButton" class="navButton" type="submit"><i class="bi bi-search"></i></button>
             </form>
             <button id="cart" class="navButton"><i class="bi bi-cart-dash-fill"></i></button>
             <button id="hamburger" class="navButton"><i class="bi bi-list"></i></button>
         </div>
     </div>
+
+    <div id="sideMenu" class="sideMenu">
+        <a href="javascript:void(0)" class="closeButton" id="closeButton">&times;</a>
+        <a href="cart.php">Cart</a>
+        <a id="logoutButton">Logout</a>
+        <a href="admin.html" id="adminButton">Admin</a>
+    </div>
+
     <div class="storeItems">
         <?php
         include 'fetchItems.php';
@@ -39,7 +46,7 @@
                 <h3 class='itemName {$item->color}'>{$item->name}</h3>
                 <p class='itemPrice'>Price: \${$item->price}</p>
                 <p class='itemDescription'>{$item->description}</p>
-                <button class='cartButton'>ADD TO CART</button>
+                <button class='cartButton' data-item-id='{$item->id}'>ADD TO CART</button>
               </div>";
             }
         } else {
