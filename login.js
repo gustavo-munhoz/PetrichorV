@@ -30,7 +30,7 @@ function Login(usernameInput, passwordInput) {
         .then(data => {
             if (data.success) {
                 alert('Login successful!');
-                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('user_id', data.user_id);
                 window.location.href = 'mainpage.php';
             } else {
                 alert('Login failed: ' + data.message);

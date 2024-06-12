@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     logoutButton.addEventListener('click', function() {
-        // TODO: Logout user when button is clicked
+        sessionStorage.removeItem('user_id');
         window.location.href = 'login.html';
     });
 });
