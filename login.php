@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username']) && isset($
         if (password_verify($passInput, $row['password'])) {
             $_SESSION['loggedIn'] = true;
             $_SESSION['userId'] = $row['id_user'];
-            echo json_encode(["success" => true]);
+            echo json_encode(["success" => true, "user_id" => $row['id_user']]);
         } else {
             echo json_encode(["success" => false, "message" => "Invalid password"]);
         }

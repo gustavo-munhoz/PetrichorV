@@ -23,13 +23,13 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     logoutButton.addEventListener('click', function() {
-        // TODO: Logout user when button is clicked
+        sessionStorage.removeItem('user_id');
         window.location.href = 'login.html';
     });
 
     if (adminButton) {
-        const username = sessionStorage.getItem('username');
-        if (username !== 'admin') {
+        const username = sessionStorage.getItem('user_id');
+        if (username !== '1') {
             adminButton.style.display = 'none';
         } else {
             adminButton.addEventListener('click', function() {
@@ -65,4 +65,22 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function addToCart(itemId) {
     // TODO: Add item to cart
-};
+    let userId = sessionStorage.getItem('user_id');
+    fetch('addToCart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            userId: userId,
+            itemId: itemId
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.mensage);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}

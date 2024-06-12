@@ -27,39 +27,47 @@
         <a href="mainpage.php">Store</a>
         <a id="logoutButton">Logout</a>
         <a href="admin.html" id="adminButton">Admin</a>
-        <!-- TODO: add admin button, to add or remove products from the store -->
     </div>
 
     <div class="cart">
         <h2>Your cart</h2>
         <div class="cartProducts">
-            <div class="product">
-                <img src="images/AtG_Missile_Mk_1.png" alt="ATG">
-                <div class="productDescription">
-                    <p id="itemName">ATG Missile MK.1</p>
-                    <p id="itemPrice">Price</p>
-                </div>
-                <div class="productQtd">
-                    <p>x</p>
-                    <p id="itemQtd">QTD</p>
-                </div>
-            </div>
-            <div class="product">
-                <img src="" alt="TEST">
-                <div class="productDescription">
-                    <p id="itemName">TEST</p>
-                    <p id="itemPrice">TEST</p>
-                </div>
-                <div class="productQtd">
-                    <p>x</p>
-                    <p id="itemQtd">QTD</p>
-                </div>
-            </div>
+            <?php
+            include "fillCart.php";
+
+            session_start();
+
+            $items = fetchCart($_SESSION['userId']);
+
+            if(!empty($items)) {
+                foreach($items as $item) {
+                    echo '<div class="product">';
+                    echo '<img src="' . htmlspecialchars($item['image']) . '" alt="' . htmlspecialchars($item['name']) . '">';
+                    echo '<div class="productDescription">';
+                    echo '<p id="itemName">' . htmlspecialchars($item['name']) . '</p>';
+                    echo '<p id="itemPrice">$' . htmlspecialchars($item['price']) . '</p>';
+                    echo '</div>';
+                    echo '<div class="productQtd">';
+                    echo '<p>x</p>';
+                    echo '<p id="itemQtd">' . htmlspecialchars($item['quantity']) . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "No items added to cart.";
+            }
+
+            ?>
         </div>
         <div class="purchaseElements">
             <div class="totalCost">
-                <p id= "total">Total:</p>
-                <p id = "totalCost">$XXXXX</p>
+                <?php
+                    $totalCost = array_reduce($items, function($sum, $item) {
+                        return $sum + ($item['price'] * $item['quantity']);
+                    }, 0);
+                    echo '<p id= "total">Total:</p>';
+                    echo '<p id = "totalCost">$' . number_format($totalCost, 2). '</p>';
+                    ?>
             </div>
             <button id="purchaseButton">PURCHASE</button>
         </div>

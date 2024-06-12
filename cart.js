@@ -20,7 +20,19 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     logoutButton.addEventListener('click', function() {
-        // TODO: Logout user when button is clicked
+        sessionStorage.removeItem('user_id');
         window.location.href = 'login.html';
     });
+
+    if (adminButton) {
+        const username = sessionStorage.getItem('user_id');
+        if (username !== '1') {
+            adminButton.style.display = 'none';
+        } else {
+            adminButton.addEventListener('click', function() {
+                window.location.href = 'admin.html';
+            });
+        }
+    }
+
 });
