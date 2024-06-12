@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function(){
     let closeButton = document.getElementById('closeButton');
     let logoutButton = document.getElementById('logoutButton');
     let adminButton = document.getElementById('adminButton');
+    let searchInput = document.getElementById('productSearch');
+    let items = document.querySelectorAll('.item');
 
 
     cartButton.addEventListener('click', function(){
@@ -36,21 +38,19 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     }
 
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const searchInput = document.getElementById('productSearch');
-        const items = document.querySelectorAll('.item');
 
-        searchInput.addEventListener('input', function() {
-            const query = searchInput.value.toLowerCase();
 
-            items.forEach(item => {
-                const itemName = item.querySelector('.itemName').textContent.toLowerCase();
-                if (itemName.includes(query)) {
-                    item.classList.remove('hidden');
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase();
+
+        items.forEach(item => {
+            const itemName = item.querySelector('.itemName').textContent.toLowerCase();
+            if (itemName.includes(query)) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
     });
 
     buttons.forEach(button => {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
         });
     });
 
-    });
+    
 });
 
 function addToCart(itemId) {

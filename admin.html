@@ -15,7 +15,7 @@
     <div class="NavBar">
         <img class="logo" src="images/logo.png" alt="logo.png" >
         <div class="searchElements">
-            <button id="cart" class="navButton"><i class="bi bi-cart-dash-fill"></i></button>
+            <button id="cartButton" class="navButton"><i class="bi bi-cart-dash-fill"></i></button>
             <button id="hamburger" class="navButton"><i class="bi bi-list"></i></button>
         </div>
     </div>
@@ -26,6 +26,33 @@
         <a href="cart.php">Cart</a>
         <a id="logoutButton">Logout</a>
     </div>
+
+    <div class="itemManager">
+        <div>
+            <button id="addButton">+</button>
+        </div>
+        <div class="item">
+            <div class="imgContainer">
+                <img src="test" alt="test">
+            </div>
+            <div class="itemInfo">
+                <p id="itemName">Item Name</p>
+                <p id="itemPrice">Item Price</p>
+            </div>
+            <button id="removeButton">Remove Item</button>
+        </div>
+        <div class="item">
+            <div class="imgContainer">
+                <img src="test" alt="test">
+            </div>
+            <div class="itemInfo">
+                <p id="itemName">Item Name</p>
+                <p id="itemPrice">Item Price</p>
+            </div>
+            <button id="removeButton">Remove Item</button>
+        </div>
+    </div>
+
     <script src="admin.js"></script>
 </body>
 </html>

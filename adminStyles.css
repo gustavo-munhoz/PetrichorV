@@ -1,1 +1,72 @@
 @import "styles.css";
+
+.itemManager{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: auto;
+}
+
+#addButton{
+    width: 70px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6fca4b;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#addButton:hover{
+    cursor: pointer;
+    background-color: #53d81f;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.imgContainer{
+    width: 70px;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #535353;
+    align-items: center;
+    justify-content: center;
+}
+
+#itemName{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 3px;
+    margin-top: 15px;
+}
+
+#itemPrice{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#removeButton{
+    background-color: #d13f3f;
+    border: none;
+    border-radius: 5px;
+    font-family: 'gemunu libre', sans-serif;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#removeButton:hover{
+    cursor: pointer;
+    background-color: #e93e3e;
+}
