@@ -32,26 +32,29 @@
             <button id="addButton">+</button>
             <input id="productSearch" type="text" placeholder="Search item...">
         </div>
-        <div class="item">
-            <div class="imgContainer">
-                <img src="test" alt="test">
-            </div>
-            <div class="itemInfo">
-                <p id="itemName">Item Name</p>
-                <p id="itemPrice">Item Price</p>
-            </div>
-            <button id="removeButton">Remove Item</button>
-        </div>
-        <div class="item">
-            <div class="imgContainer">
-                <img src="test" alt="test">
-            </div>
-            <div class="itemInfo">
-                <p id="itemName">Item Name</p>
-                <p id="itemPrice">Item Price</p>
-            </div>
-            <button id="removeButton">Remove Item</button>
-        </div>
+
+        <?php
+        include 'fetchItems.php';
+
+        $items = fetchItems();
+
+        if (!empty($items)) {
+            foreach ($items as $item) {
+                echo "<div class='item'>
+                <div class='imgContainer'>
+                    <img src='{$item->image}' alt='test'>
+                </div>
+                <div class='itemInfo'>
+                    <p id='itemName'>{$item->name}</p>
+                    <p id='itemPrice'>{$item->price}</p>
+                </div>
+                <button id='removeButton'>Remove Item</button>
+            </div>";
+            }
+        } else {
+            echo "No items found.";
+        }
+        ?>
     </div>
 
     <script src="admin.js"></script>

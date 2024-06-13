@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
             adminButton.style.display = 'none';
         } else {
             adminButton.addEventListener('click', function() {
-                window.location.href = 'admin.html';
+                window.location.href = 'admin.php';
             });
         }
     }
