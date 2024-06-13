@@ -43,7 +43,12 @@
     justify-content: center;
 }
 
-#itemName{
+.imageDisplay{
+    width: 60px;
+    height: 50px;
+}
+
+.itemName{
     font-weight: bold;
     font-size: 25px;
     margin-bottom: 3px;
@@ -55,7 +60,7 @@
     margin-top: 5px;
 }
 
-#removeButton{
+.removeButton{
     background-color: #d13f3f;
     border: none;
     border-radius: 5px;
@@ -66,7 +71,69 @@
     font-size: 20px;
 }
 
-#removeButton:hover{
+.removeButton:hover{
     cursor: pointer;
     background-color: #e93e3e;
+}
+
+.hidden{
+    display: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #acacac;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.close {
+    color: #535353;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container{
+    margin: 30px 10px;
+}
+
+#confirmButton{
+    background-color: #6fca4b;
+    border: none;
+    border-radius: 5px;
+    font-family: 'gemunu libre', sans-serif;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#confirmButton:hover{
+    cursor: pointer;
+    background-color: #53d81f;
 }

@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function addToCart(itemId) {
-    // TODO: Add item to cart
     let userId = sessionStorage.getItem('user_id');
     fetch('addToCart.php', {
         method: 'POST',
