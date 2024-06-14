@@ -27,6 +27,7 @@ if(move_uploaded_file($image['tmp_name'], $targetFilePath)){
     } else {
         echo json_encode(['success' => false, 'message' => 'Failed to add product: ' . $stmt->error]);
     }
-} else{
-    echo json_encode(['success'=> false,'message'=> 'Failed to upload image.']);
+} else {
+    $error = error_get_last();
+    echo json_encode(['success' => false, 'message' => 'Failed to upload image to path: ' . $targetFilePath, 'error' => $error['message']]);
 }

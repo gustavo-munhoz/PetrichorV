@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="NavBar">
-        <img class="logo" src="images/logo.png" alt="logo.png" >
+        <img class="logo" src="images/logo.png" alt="logo.png" onclick="returnHome()">
         <div class="searchElements">
             <input id="productSearch" type="text" placeholder="Find something...">
             <button id="searchButton" class="navButton"><i class="bi bi-search"></i></button>
@@ -54,7 +54,7 @@
                     echo '</div>';
                 }
             } else {
-                echo "No items added to cart.";
+                echo "<h1>No items added to cart.</h1>";
             }
 
             ?>
@@ -91,5 +91,10 @@
         </div>
     </div>
     <script src="cart.js"></script>
+    <script >
+        function returnHome() {
+            window.location.href = "mainpage.php"
+        }
+    </script>
 </body>
 </html>

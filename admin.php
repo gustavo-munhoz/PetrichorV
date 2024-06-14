@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="NavBar">
-        <img class="logo" src="images/logo.png" alt="logo.png" >
+        <img class="logo" src="images/logo.png" alt="logo.png" onclick="returnHome()">
         <div class="searchElements">
             <button id="cartButton" class="navButton"><i class="bi bi-cart-dash-fill"></i></button>
             <button id="hamburger" class="navButton"><i class="bi bi-list"></i></button>
@@ -104,5 +104,10 @@
     </div>
 
     <script src="admin.js"></script>
+    <script >
+        function returnHome() {
+            window.location.href = "mainpage.php"
+        }
+    </script>
 </body>
 </html>

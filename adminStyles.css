@@ -101,7 +101,8 @@
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 30%;
+    width: 25%;
+    border-radius: 12px;
 }
 
 .close {
@@ -120,6 +121,7 @@
 
 .container{
     margin: 30px 10px;
+    font-size: 32px;
 }
 
 #confirmButton{
